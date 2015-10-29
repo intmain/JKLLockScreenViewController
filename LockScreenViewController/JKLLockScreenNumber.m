@@ -26,11 +26,12 @@ static const CGFloat LSNContextSetLineWidth = 0.8f;
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGColorRef colorRef  = [self tintColor].CGColor;
+    CGColorRef hilightedColorRef = [UIColor colorWithRed:0.22 green:0.38 blue:0.68 alpha:1].CGColor;
     UIControlState state = [self state];
 
     CGContextSetLineWidth(context, LSNContextSetLineWidth);
     if (state == UIControlStateHighlighted) {
-        CGContextSetFillColorWithColor(context, colorRef);
+        CGContextSetFillColorWithColor(context, hilightedColorRef);
         CGContextFillEllipseInRect (context, inset);
         CGContextFillPath(context);
     }

@@ -31,7 +31,7 @@ static const NSTimeInterval LSVShakeAnimationDuration = 0.5f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     switch (_lockScreenMode) {
         case LockScreenModeVerification:
         case LockScreenModeNormal: {
@@ -338,6 +338,11 @@ static const NSTimeInterval LSVShakeAnimationDuration = 0.5f;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 @end
